@@ -1,16 +1,16 @@
 # -*- coding:UTF-8 -*-
-#python ÕıÔò±í´ïÊ½Ñ§Ï°
-#²Î¿¼:http://www.runoob.com/regexp/regexp-syntax.html    (main)
-#²Î¿¼£ºhttp://www.runoob.com/python/python-reg-expressions.html
-#²Î¿¼£ºhttp://www.jb51.net/article/65286.htm
-#²Î¿¼: http://www.jb51.net/article/50511.htm
+#python æ­£åˆ™è¡¨è¾¾å¼å­¦ä¹ 
+#å‚è€ƒ:http://www.runoob.com/regexp/regexp-syntax.html    (main)
+#å‚è€ƒï¼šhttp://www.runoob.com/python/python-reg-expressions.html
+#å‚è€ƒï¼šhttp://www.jb51.net/article/65286.htm
+#å‚è€ƒ: http://www.jb51.net/article/50511.htm
 
 
 import re
 import sys
 type = sys.getfilesystemencoding()
 
-print (re.match('www', 'www.runoob.com').span()) #²»¼Ó.span()»á·µ»ØÒ»Ö±µØÖ·
+print (re.match('www', 'www.runoob.com').span()) #ä¸åŠ .span()ä¼šè¿”å›ä¸€ç›´åœ°å€
 print (re.match('runoob', 'www.runoob.com'))
 
  
@@ -23,22 +23,22 @@ if matchObj:
    print "matchObj.group(1) : ", matchObj.group(1)
    print "matchObj.group(2) : ", matchObj.group(2)
 else:
-   print "No match!!"
+   print ("No match!!")
 
 
-print(re.search('www', 'www.runoob.com').span())  # ÔÚÆğÊ¼Î»ÖÃÆ¥Åä
-print(re.search('com', 'www.runoob.com').span())         # ²»ÔÚÆğÊ¼Î»ÖÃÆ¥Åä
+print(re.search('www', 'www.runoob.com').span())  # åœ¨èµ·å§‹ä½ç½®åŒ¹é…
+print(re.search('com', 'www.runoob.com').span())         # ä¸åœ¨èµ·å§‹ä½ç½®åŒ¹é…
 
 
-phone = "2004-959-559 # ÕâÊÇÒ»¸ö¹úÍâµç»°ºÅÂë"
+phone = "2004-959-559 # è¿™æ˜¯ä¸€ä¸ªå›½å¤–ç”µè¯å·ç "
  
-# É¾³ı×Ö·û´®ÖĞµÄ Python×¢ÊÍ 
-num = re.sub(r'#.*$', "", phone) #ÃÀÔª·ûºÅ£¬Æ¥ÅäÒ»¸ö×Ö·û´®µÄ½áÎ²»òÕß×Ö·û´®×îºóÃæµÄ»»ĞĞ·û
-print "µç»°ºÅÂëÊÇ: ", num
+# åˆ é™¤å­—ç¬¦ä¸²ä¸­çš„ Pythonæ³¨é‡Š 
+num = re.sub(r'#.*$', "", phone) #ç¾å…ƒç¬¦å·ï¼ŒåŒ¹é…ä¸€ä¸ªå­—ç¬¦ä¸²çš„ç»“å°¾æˆ–è€…å­—ç¬¦ä¸²æœ€åé¢çš„æ¢è¡Œç¬¦
+print "ç”µè¯å·ç æ˜¯: ", num
  
-# É¾³ı·ÇÊı×Ö(-)µÄ×Ö·û´® 
-num = re.sub(r'\D', "", phone) #\D ·ÇÊı×Ö
-print "µç»°ºÅÂëÊÇ : ", num
+# åˆ é™¤éæ•°å­—(-)çš„å­—ç¬¦ä¸² 
+num = re.sub(r'\D', "", phone) #\D éæ•°å­—
+print "ç”µè¯å·ç æ˜¯ : ", num
 
 stringTmp = 'c1212'
 items = re.findall(r'[1-9][2-9{0, 1}]', stringTmp)
@@ -46,9 +46,9 @@ for item in items:
         print item[0]
 
 
-test = "<span>ÉÏÁª£º¹â»»kindle²»¶ÁÊé£¬ÇîÉÕ¶ú»ú²»Ìı¸è¡£"
+test = "<span>ä¸Šè”ï¼šå…‰æ¢kindleä¸è¯»ä¹¦ï¼Œç©·çƒ§è€³æœºä¸å¬æ­Œã€‚"
 print test
-if sys.version_info < (3, 4):  #python ÅĞ¶Ï :https://segmentfault.com/q/1010000000127878
+if sys.version_info < (3, 4):  #python åˆ¤æ–­ :https://segmentfault.com/q/1010000000127878
         pattern = re.compile('[\x80-\xff]+')
 else:
         pattern = re.compile('[\u4e00-\u9fa5]+')
@@ -56,10 +56,10 @@ items = re.findall(pattern,test)
 for item in items:
         print item
 
-test = "<a href=\"/article/118941806\" target=\"_blank\" class=\'contentHerf\' ><div class=\"content\"><span>ÉñÒ»°ãµÄÇÉºÏ<br/>Ò»¸ö11ÅóÓÑ11£¬¹ØÏµºÜºÃ£¬¾ÍÊÇÄÇÖÖÄãÒ»ÕÅ×ìËû¾ÍÖªµÀÄãÒªËµÉ¶£¬ºÃ¾ÃÃ»ÁªÏµÁË£¬ÄÇÌì¸úËûÁÄÌì£¬È»ºóËûËµÒª²»½»»»qq¸ÉºÍÃÜÂëÍæ£¬ÎÒËµ¿ÉÒÔ£¬ÎÒµÄÃÜÂëÊÇÇ°Ãæ¼¸¸ö×ÖÄ¸£¬ºóÃæÊÇ520£¬Ã»Ïëµ½ËûµÄÃØÂëÊÇÇ°ÃæÊÇ¼¸¸ö×ÖÄ¸£¬ºóÃæÊÇ1314£¬Í»È»ĞÄÀïÃæÕæµÄÓĞÒ»ÖÖ¸Ğ¾õ£¬ÏëÒª¸úËûÒ»±²×ÓÔÚÒ»ÆğµÄµÄ¸Ğ¾õ£¬È´ÆÈÓÚÄ³Ğ©Ô­ÒòÈ´Ö»ÄÜËµÊÇÕæµÄºÃÇÉ£¬ĞÄÀïÃæÄÇĞ©²¨ÌÎĞÚÓ¿µÄ»°µ½×ì±ßÓÖÑÊÏÂÈ¥¡£²»ÖªµÀËûÓĞÃ»ÓĞÍæôÜ°Ù£¬»á²»»á¿´¼û</span></div></a>"
+test = "<a href=\"/article/118941806\" target=\"_blank\" class=\'contentHerf\' ><div class=\"content\"><span>ç¥ä¸€èˆ¬çš„å·§åˆ<br/>ä¸€ä¸ª11æœ‹å‹11ï¼Œå…³ç³»å¾ˆå¥½ï¼Œå°±æ˜¯é‚£ç§ä½ ä¸€å¼ å˜´ä»–å°±çŸ¥é“ä½ è¦è¯´å•¥ï¼Œå¥½ä¹…æ²¡è”ç³»äº†ï¼Œé‚£å¤©è·Ÿä»–èŠå¤©ï¼Œç„¶åä»–è¯´è¦ä¸äº¤æ¢qqå¹²å’Œå¯†ç ç©ï¼Œæˆ‘è¯´å¯ä»¥ï¼Œæˆ‘çš„å¯†ç æ˜¯å‰é¢å‡ ä¸ªå­—æ¯ï¼Œåé¢æ˜¯520ï¼Œæ²¡æƒ³åˆ°ä»–çš„ç§˜ç æ˜¯å‰é¢æ˜¯å‡ ä¸ªå­—æ¯ï¼Œåé¢æ˜¯1314ï¼Œçªç„¶å¿ƒé‡Œé¢çœŸçš„æœ‰ä¸€ç§æ„Ÿè§‰ï¼Œæƒ³è¦è·Ÿä»–ä¸€è¾ˆå­åœ¨ä¸€èµ·çš„çš„æ„Ÿè§‰ï¼Œå´è¿«äºæŸäº›åŸå› å´åªèƒ½è¯´æ˜¯çœŸçš„å¥½å·§ï¼Œå¿ƒé‡Œé¢é‚£äº›æ³¢æ¶›æ±¹æ¶Œçš„è¯åˆ°å˜´è¾¹åˆå’½ä¸‹å»ã€‚ä¸çŸ¥é“ä»–æœ‰æ²¡æœ‰ç©ç³—ç™¾ï¼Œä¼šä¸ä¼šçœ‹è§</span></div></a>"
 pattern = re.compile('(<br/>)')
 test = pattern.sub('', test)
-if sys.version_info < (3, 4):  #python ÅĞ¶Ï :https://segmentfault.com/q/1010000000127878
+if sys.version_info < (3, 4):  #python åˆ¤æ–­ :https://segmentfault.com/q/1010000000127878
         pattern = re.compile('a href="/article/118941806" target="_blank" class=\'contentHerf\' ><div class="content"><span>(.*[\x80-\xff]+)')
 else:
         pattern = re.compile('a href="/article/118941806" target="_blank" class=\'contentHerf\' ><div class="content"><span>(.*[\u4e00-\u9fa5]+)')
